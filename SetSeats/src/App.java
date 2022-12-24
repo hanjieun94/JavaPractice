@@ -4,8 +4,6 @@ public class App {
 
     public static void main(String[] args) throws IOException {
 
-        //#12
-
         //Room클래스의 객체(room) 생성
         Room room = new Room();
 
@@ -22,8 +20,6 @@ public class App {
         room.sort();
         System.out.println();
         room.print();
-
-
     }
 
 }
