@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
-//1.
 public class Room {
 
     private Student[] students;
@@ -36,7 +35,6 @@ public class Room {
 
     }
 
-    //3.
     public void shuffle() {
         Random random = new Random();
         int j = random.nextInt(10);
