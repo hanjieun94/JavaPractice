@@ -58,8 +58,5 @@ public class Canvas {
                 System.out.print(canvas[y][x]);
             System.out.println();
         }
-
     }
-
-
 }
