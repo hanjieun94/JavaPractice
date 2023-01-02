@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //함수 사용하는 2가지 방법
+    //1. function Exam() {
+        
+    //     kor = 30;
+    // }
+    //2. var exam1 = new Exam();
+    //객체 생성 후 초기화(빈 객체를 초기화)
+    // console.log(exam1);
+    // console.log(exam1.kor);
+    
+    
+    
+    function Exam() {
+        this.kor = 30;
+        this.eng = 20;
+        this.math = 40;
+
+        // this.total = function() {
+        //     return this.kor + this.eng + this.math;
+        // }
+
+        // Exam.prototype.total = function() {
+        //     return this.kor + this.eng + this.math;
+        // }
+    }
+    Exam.protoType = {
+        total : function() {
+            return this.kor + this.eng + this.math;
+         },
+        avg : function() {
+            return this.total()/3;
+        }
+    };
+    
+
+    var exam = new Exam();
+    console.log(exam);
+    var exam1 = new Exam();
+    console.log(exam1);
+
+    // var isEquals = exam.total === exam1.total;
+    // console.log(isEquals);
+
+
+    // //this의 객체
+    // new Exam();
+    // //전역 객체
+    // Exam();
+    
+    var ar = [];
+    Array.prototype.total = function() {
+        return 40;
+    }
+    
+    //console.log(ar.constructor);
+    console.log(ar.constructor===Array);
+    ar.constructor.prototype.avg = function() {
+        
+    }
+    console.log(ar.total());
+    var ar1 = [];
+    console.log(ar1.total());
+
+    console.log(ar.constructor.prototype.constructor);
+
+    console.log(exam1);
+    var exam2 = Object.create(exam);
+    console.log(exam2);
+
+</script>
+
+<body>
+    
+</body>
+</html>

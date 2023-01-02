@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //현재 날짜와 시간
+    var today = new Date();
+    
+    // if(date.getHours<12)
+    //     alert("오전");
+    // else
+    //     alert("오후");
+
+    var num = prompt("숫자를 입력하세요.",);
+    switch(num%2) {
+        case 0 :
+            console.log("Even");
+            break;
+        case 1 :
+            console.log("Odd");
+    }
+
+    
+    //문자열을 유지하고 연결
+    var dateList = new String();
+    for(var i=0; i<31; i++){
+        dateList += (i+1) + " ";
+    }
+    console.log(dateList);
+    
+    
+
+
+    
+</script>
+<body>
+    
+</body>
+</html>
