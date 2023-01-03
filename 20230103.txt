@@ -1,0 +1,37 @@
+덜렁대지맛!
+
+canvas와 window와의 관계
+
+웹의 표준 명명법
+	대문자 시작x
+	대소문자 구분x
+
+캡슐화란?
+	데이터 구조화 + 함수
+	+
+	책임(서비스, 역할) 부여하는 것, 나눠주는 것
+
+
+
+상속
+composition
+aggregation
+composition&aggregation
+
+this
+	호출할 때	
+	위임할 때 bind
+
+
+	
+callback함수
+
+
+배경 객체?
+---------------
+6
+모듈시스템
+객체지향 지원
+상속 지원
+
+l
