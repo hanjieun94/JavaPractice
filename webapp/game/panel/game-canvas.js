@@ -8,20 +8,27 @@ class GameCanvas{
         this.dom.onclick = this.clickHandler.bind(this);
     }
      
-     run(){
+    run(){
         this.update();
         this.draw();
     }
 
     update(){
+        this.boy.update();
+        //this.boy.move(2);
 
     }
     draw(){
         this.boy.draw(this.ctx);
     }
+    pause(){
+        this.pause = true;
+    }
     //event handlers---------------------
-    clickHandler(){
-        this.boy.move(2);
+    clickHandler(e){
+        //this.pause = true;
+        //this.boy.move(2);
+        this.boy.moveTo(e.x,e.y);
         this.boy.draw(this.ctx);
 
     }

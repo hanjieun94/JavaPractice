@@ -1,0 +1,14 @@
+익숙해지기!!
+작지만 완성도 있는 프로그램
+
+
+let, const
+지역화가 가능한 변수
+변수 충돌	
+=> 변수의 정상화
+
+const
+
+template string
+
+computed property???

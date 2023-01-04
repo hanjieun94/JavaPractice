@@ -8,7 +8,8 @@
     <script src="./item/background.js"></script>
     <script src="./item/boy.js"></script>
     <script src="./panel/game-canvas.js"></script>
-    <script src ="app2.js"></script>
+    <script src="app2.js"></script>
+    <script src="ex1-es6-var"></script>
     <script>
         let kor = 20;
         let eng = 20;
@@ -25,6 +26,7 @@
             let kor = exam.kor;
             let eng = exam.eng;
             let total = exam.total();
+            //let total = exam.total.bind(exam)
 
             console.log("kor:"+exam.kor);
             console.log("eng:"+exam.eng);
