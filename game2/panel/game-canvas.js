@@ -1,16 +1,19 @@
 class GameCanvas{
-
-    constructor(x,y){
+//사용자 입출력 담당
+//책임을 전달
+    constructor(){
         this.dom = document.querySelector(".game-canvas");
+        this.dom.focus();
         /** @typeof {CanvasRenderingContext2D} */
-        this.ctx = this .dom.getContext("2d");
-        this.dom.onclick = this.clickHandler.bind(this);
-        
-        this.boy = new Boy(100,100);
+        this.ctx = this.dom.getContext("2d");
+        this.boy = new Boy(500,500);
+        this.bg = new Background();
         
         this.gameover = false;
         this.pause = false;
-
+        
+        this.dom.onclick = this.clickHandler.bind(this);
+        this.dom.onkeydown = this.keyDownHandler.bind(this);
     }
     
     run(){
@@ -23,23 +26,40 @@ class GameCanvas{
         this.draw();
         
         console.log("time start");
-        window.setTimeout(this.run.bind(this), 1000)
+        window.setTimeout(this.run.bind(this), 17)
     }
     update(){
         this.boy.update();
+        this.bg.update();
     }
     draw(){
+        this.bg.draw(this.ctx);
         this.boy.draw(this.ctx);
-        
+       
     }
     pause(){
         this.pause = true;
 
     }
     //Event Handlert--------------------------------------------
-    clickHandler(e){
-        this.boy.moveTo(e.x, e.y);
-        this.boy.draw(this.ctx);
+    //1.사용자로부터 입력 -> 2.상태변수 변화 -> 사용자에게 출력
+    clickHandler(e){    //1.사용자로부터 입력
+        this.boy.moveTo(e.x, e.y);  //2.상태변수 변화
+        //this.boy.draw(this.ctx);
 
+    }
+    //canvas는 key입력을 받지 않는다.
+    //tap을 눌렀을 때 건너뛰는 녀석은 key입력을 받지 않는다.
+    keyDownHandler(e){
+        switch(e.key){
+            case "ArrowUP":
+                break;
+            case "ArrowLeft":
+                break;
+            case "ArrowRight":
+                break;
+            case "AroowDown":
+                break;    
+        }
     }
 }
